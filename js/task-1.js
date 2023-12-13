@@ -1,18 +1,49 @@
-function makeTransaction(quantity, pricePerDroid) {
-    return `You ordered ${quantity} droids worth ${pricePerDroid} credits!`;
-};
+/*let getUserNames = (users) => {
+    let namesArr = []
+    for (const usersNames of users) {
+        namesArr.push(usersNames.name);
+    }
+    return namesArr;
+};*/
 
-console.log(makeTransaction(5, 3000)); // "You ordered 5 droids worth 15000 credits!"
-console.log(makeTransaction(3, 1000)); // "You ordered 3 droids worth 3000 credits!"
-console.log(makeTransaction(10, 5000)); // "You ordered 10 droids worth 5000 credits!"
+let getUserNames = users => users.map(user => user.name);
 
-
-/*
-function makeTransaction(quantity, pricePerDroid) {
-    console.log(`You ordered ${quantity} droids worth ${pricePerDroid} credits!`);
-};
-
-makeTransaction(5, 3000);
-makeTransaction(3, 1000);
-makeTransaction(10, 5000);
-*/
+console.log(
+  getUserNames([
+  {
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    balance: 2811
+  },
+  {
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    balance: 3821
+  },
+  {
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    balance: 3793
+  },
+  {
+    name: "Elma Head",
+    email: "elmahead@omatom.com",
+    balance: 2278
+  },
+  {
+    name: "Carey Barr",
+    email: "careybarr@nurali.com",
+    balance: 3951
+  },
+  {
+    name: "Blackburn Dotson",
+    email: "blackburndotson@furnigeer.com",
+    balance: 1498
+  },
+  {
+    name: "Sheree Anthony",
+    email: "shereeanthony@kog.com",
+    balance: 2764
+  },
+])
+); // ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
